@@ -1,0 +1,30 @@
+┌────────────┐
+│   CVE ID   │
+└─────┬──────┘
+      │
+      ▼
+┌────────────────┐
+│ Fetch CVSS     │ ← NVD API (or cached DB)
+│ Base Vector    │
+└─────┬──────────┘
+      │
+      ▼
+┌────────────────┐
+│ Parse Sheet    │ ← CSV / XLSX
+│ Metric Inputs  │
+└─────┬──────────┘
+      │
+      ▼
+┌────────────────┐
+│ Rebuild Vector │ ← Apply overrides
+└─────┬──────────┘
+      │
+      ▼
+┌────────────────┐
+│ CVSS Calculator│ ← Spec-accurate math
+└─────┬──────────┘
+      │
+      ▼
+┌────────────────┐
+│ Output Result  │
+└────────────────┘
